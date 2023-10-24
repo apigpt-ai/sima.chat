@@ -1,9 +1,56 @@
-<html>
-  <body>
-    <h3>Sima.Chat
-    </h3>
-    <p>
-    Sima.Chat is your AI pair programmer. Save conversations, continue anytime. Visual Studio Code - ChatGPT Integration. Supports GPT-4, GPT3.5, GPT3, Codex. Create files, view diffs with one click. Learn code, add tests, find bugs, and more.
-    </p>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PGPT - Platform as a Service for AIGC</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/dreamer-paul/kico-style/kico.css"/>
+    <link rel="stylesheet" href="index.css"/>
+</head>
+<body>
+<main>
+    <div class="board">
+        <form class="inner-wrap">
+            <p>
+                <img src="sima-logo.svg" alt="Rabbit" style="max-width: 40%"/>
+            </p>
+            <h2>司码.ChatGPT编程助手 / Sima.ChatGPT Programming Assistant
+
+</h2>
+            <!--div class="input-group has-icon">
+                <input type="text" name="email" placeholder="Email">
+                <button class="btn red">Subscribe</button>
+            </div-->
+            <p>Contact us: wx@quseit.com | <a href='privacy-and-cookie-policy/'>Privacy</a></p>
+        </form>
+    </div>
+</main>
+<footer>
+    <div class="wrap">
+    </div>
+</footer>
+<script>
+    const $$ = (tag) => document.getElementsByTagName(tag)[0];
+
+    var form = $$("form");
+    var email = $$("input");
+    form.onsubmit = function (ev) {
+        ev.preventDefault();
+
+        if(email.value.indexOf("@") === -1){
+            alert("Please enter a valid email!");
+        }
+        else{
+            let img = document.createElement("img");
+            img.hidden = true;
+            img.src = "?email=" + email.value;
+
+            form.parentElement.insertBefore(img, form);
+
+            alert("Thank you.");
+        }
+    }
+</script>
+</body>
 </html>
